@@ -4,14 +4,14 @@
   "description": "Este sera el repositorio del proyecto.\r La primera tarea el PI_003_Github",
   "main": "HolaMundo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2",
-    "readline-sync": "^1.4.10"
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
