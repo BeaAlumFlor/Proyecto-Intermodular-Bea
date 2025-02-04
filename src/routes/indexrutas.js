@@ -40,4 +40,34 @@ router.get("/rutagetjson", (req, res) => { //función flecha
     });
 });
 
+router.post("/rutapost1", (req, res) => { //función flecha
+    req.body = "consulta de datos";  //donde se podran consultar datos de un formulario almacenado de req
+    console.log(`enviada una petición post`);
+    res.send(`Hola soy la primera ruta post`);
+});
+
+router.post("/rutapost2", (req, res) => { //función flecha
+    req.body = "consulta de datos 2";  //donde se podran consultar datos de un formulario almacenado de req
+    console.log(`enviada una petición post`);
+    res.send(`Hola soy la segunda ruta post`);
+});
+
+router.post("/rutapost3", (req, res) => { //función flecha
+    req.body = "consulta de datos 3";  //donde se podran consultar datos de un formulario almacenado de req
+    console.log(`enviada una petición post`);
+    res.send(`Hola soy la tercera ruta post`);
+});
+
+router.post("/rutapost4", (req, res) => { //función flecha
+    req.body = "consulta de datos 4";  //donde se podran consultar datos de un formulario almacenado de req
+    console.log(`enviada una petición post`);
+    res.send(`Hola soy la cuarta ruta post`);
+});
+
+router.post("/rutapost5", (req, res) => { //función flecha
+    req.body = "consulta de datos 5";  //donde se podran consultar datos de un formulario almacenado de req
+    console.log(`enviada una petición post`);
+    res.send(`Hola soy la quinta ruta post`);
+});
+
 module.exports = router; //exportación para que pueda usarlo el servidor

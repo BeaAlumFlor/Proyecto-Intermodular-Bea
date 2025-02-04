@@ -1,7 +1,10 @@
 const express = require("express"); //Variable que almacena a express ("como un objeto")
 const app= express(); //Se inicializa el "objeto" express
+const morgan = require("morgan");
 
 app.set("port", process.env.PORT || 8080); //puerto de entrada, permitirá ver en internet - 8080 puerto de testeo
+
+app.use(morgan("dev")); //modulo middleware, controla datos que pasan entre front y backend
 
 app.listen(app.get("port"), leerPuerto()); //Esta atento a lo que pasa en el puerto
 
