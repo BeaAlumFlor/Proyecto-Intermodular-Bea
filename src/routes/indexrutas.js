@@ -43,7 +43,9 @@ router.get("/rutagetjson", (req, res) => { //función flecha
 router.post("/rutapost1", (req, res) => { //función flecha
     req.body = "consulta de datos";  //donde se podran consultar datos de un formulario almacenado de req
     console.log(`enviada una petición post`);
-    res.send(`Hola soy la primera ruta post`);
+    res.json({
+        descripcion: `Hola soy la primera ruta post`,
+    });
 });
 
 router.post("/rutapost2", (req, res) => { //función flecha
@@ -67,6 +69,7 @@ router.post("/rutapost4", (req, res) => { //función flecha
 router.post("/rutapost5", (req, res) => { //función flecha
     req.body = "consulta de datos 5";  //donde se podran consultar datos de un formulario almacenado de req
     console.log(`enviada una petición post`);
+    console.log(req.body);
     res.send(`Hola soy la quinta ruta post`);
 });
 
