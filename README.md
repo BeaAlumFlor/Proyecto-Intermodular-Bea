@@ -20,7 +20,7 @@ Realizado:
 ACTUALIZACIÓN 04/02/2025
 Tarea PI_005_PROTOTIPO_POST
 Realizado:
-    - Instalación de Postman en el pc
-    - Instalación del módulo morgan como -D
-    - modificación de index.js para introducir el morgan
-    - creación de 5 rutas post básicas
+- Instalación de Postman en el pc
+- Instalación del módulo morgan como -D
+- modificación de index.js para introducir el morgan
+- creación de 5 rutas post básicas
