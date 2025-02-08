@@ -61,7 +61,7 @@ router.post("/rutapost2conformulario", (req, res) => {
   req.body = "consulta de datos 2"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post`);
   console.log(req.body);
-  res.send(`Hola soy la segunda ruta post`);
+  res.send(`Hola soy la segunda ruta post con formulario`);
 });
 
 router.post("/rutapost3", (req, res) => {
