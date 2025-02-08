@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1: Creación de formulario</title>
+</head>
+<body>
+<h1>FORMULARIO</h1>
+	<form name="Nombre" action="datos.php" method="get">
+		<span>Rellena el siguiente formulario:</span> <br>
+		<span>Nombre</span>
+		<input type="text" name="nombre" placeholder="Nombre" title="Introduce tu nombre">
+		<input type="text" name="apellidos" placeholder="Apellidos" title="Introduce tus nombre"><br>
+		<span>Email:</span>
+		<input type="email" name="email" placeholder="Introduce tu email" title="Introduce un email válido"><br>
+		<span>Sexo: </span>
+		<div>
+			<input type="radio" id="primeraopcion" name="sexo" value="femenino" checked>
+			<label for="primeraopcion">F</label>
+			<input type="radio" id="segundaopcion" name="sexo" value="masculino">
+			<label for="segundaopcion">M</label>	
+		</div><br>
+		<span>Fecha de nacimiento:</span>
+		<input type="date" name="nacimiento" min="1900-01-01" max="2050-12-31" required><br>
+		<span>Contraseña: </span>
+		<input type="password" name="contraseña" pattern="[0-9a-fA-F]{4,8}" size="9" placeholder="Contraseña"><br>
+		<span>Móvil</span>
+		<input type="tel" name="movil" size="9" pattern="[0-9]{9}" placeholder="123456789"><br>
+		<span>Sitio Web: </span>
+		<select name="web" id=web>
+			<option value="http://www.floridauniversitaria.es">Florida Universitaria</option>
+			<option label="Universidad de Valencia" value="https://www.uv.es" >
+			<option label="Universidad Politécnica de Valencia" value="https://www.upv.es" >
+		</select><br>
+		<input type="submit" name="Enviar" value="Enviar">
+		<input type="reset" name="Borrar" value="Borrar datos">
+		
+	
+	</form>
+</body>
+</html>
