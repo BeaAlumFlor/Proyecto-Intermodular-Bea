@@ -1,5 +1,6 @@
 const { Router } = require("express"); //solo utiliza el trocito de las rutas
 const router = Router(); //llama a ese trocito
+const path_html = require("path"); //para acceder a rutas internas
 
 //Rutas
 router.get("/", function (req, res) {
@@ -60,27 +61,28 @@ router.post("/rutapost2conformulario", (req, res) => {
   //función flecha
   req.body = "consulta de datos 2"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post`);
-  console.log(req.body);
-  res.send(`Hola soy la segunda ruta post con formulario`);
+  console.log(req);
+  //res.send(`Hola soy la segunda ruta post`);
+  res.sendFile(path_html.join(__dirname, "../Formulario1-AP8.html")); //llamo a la ruta llamada x
 });
 
-router.post("/rutapost3", (req, res) => {
+router.post("/rutapost3conformulario", (req, res) => {
   //función flecha
   req.body = "consulta de datos 3"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post`);
   console.log(req.body);
-  res.send(`Hola soy la tercera ruta post`);
+  res.sendFile(path_html.join(__dirname, "../Formulario2-AP8.html")); //llamo a la ruta llamada x
 });
 
-router.post("/rutapost4", (req, res) => {
+router.post("/rutapost4conformulario", (req, res) => {
   //función flecha
   req.body = "consulta de datos 4"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post`);
   console.log(req.body);
-  res.send(`Hola soy la cuarta ruta post`);
+  res.sendFile(path_html.join(__dirname, "../Formulario3-AP8.html")); //llamo a la ruta llamada x
 });
 
-router.post("/rutapost5", (req, res) => {
+router.post("/rutapost5sinformulario", (req, res) => {
   //función flecha
   req.body = "consulta de datos 5"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post`);

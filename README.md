@@ -21,7 +21,7 @@ Realizado:
 
 ---
 
-ACTUALIZACIÓN 08/02/2025
+ACTUALIZACIÓN 09/02/2025
 Tarea PI_005_PROTOTIPO_POST
 Realizado:
 
@@ -29,4 +29,4 @@ Realizado:
 - Instalación del módulo morgan como -D
 - modificación de index.js para introducir el morgan
 - creación de 5 rutas post básicas
-- Intento fallido visualización formulario
+- Intento de visualización del formulario
