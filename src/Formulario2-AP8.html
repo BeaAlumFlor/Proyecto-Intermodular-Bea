@@ -8,7 +8,7 @@
 <body>
 	<h1>Formulario 2</h1>
 
-	<form name="formulario" action="datos.php" method="get">
+	<form name="formulario" action="http://localhost:8080/rutapost3conformulario" method="post">
 		<span>Provincia: </span>
 		<input list="provincias" name="provincia" id="provincia" placeholder="Seleccione una opción">
 		<datalist id="provincias">
@@ -17,14 +17,11 @@
 			<option value="Alicante">Alacant</option>
 		</datalist><br>
 
-		<span>Texto:</span>
-		<input type="text" name="texto" autofocus placeholder="Nombre" required><br>
+		<span>Dirección:</span>
+		<input type="text" name="direccion" autofocus placeholder="Nombre" required><br>
 
 		<span>Número:</span>
-		<input type="number" name="número" placeholder="Nº" min="0" max="10"><br>
-
-		<span>Fichero</span>
-		<input type="file" name="fichero" multiple><br>
+		<input type="number" name="numero" placeholder="Nº" min="0" max="10"><br>
 
 		<span>Contraseña:</span>
 		<input type="password" minlength="8" pattern="[0-9][A-Za-z0-9]*[A-Z]" title="El primer cáracter ha de ser un número y el último una letra mayúscula"><br>

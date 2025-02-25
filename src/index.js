@@ -5,7 +5,7 @@ const morgan = require("morgan");
 app.set("port", process.env.PORT || 8080); //puerto de entrada, permitirá ver en internet - 8080 puerto de testeo
 
 app.use(morgan("dev")); //modulo middleware, controla datos que pasan entre front y backend
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); //para que pueda entender los datos del formulario
 
 app.listen(app.get("port"), leerPuerto()); //Esta atento a lo que pasa en el puerto
 

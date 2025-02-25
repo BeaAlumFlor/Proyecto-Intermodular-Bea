@@ -1,6 +1,6 @@
 const { Router } = require("express"); //solo utiliza el trocito de las rutas
 const router = Router(); //llama a ese trocito
-const path_html = require("path"); //para acceder a rutas internas
+//const path_html = require("path"); //para acceder a rutas internas
 
 //Rutas
 router.get("/", function (req, res) {
@@ -49,7 +49,7 @@ router.get("/rutagetjson", (req, res) => {
 
 router.post("/rutapost1", (req, res) => {
   //función flecha
-  req.body = "consulta de datos"; //donde se podran consultar datos de un formulario almacenado de req
+  //req.body = "consulta de datos"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post`);
   console.log(req.body);
   res.json({
@@ -59,27 +59,39 @@ router.post("/rutapost1", (req, res) => {
 
 router.post("/rutapost2conformulario", (req, res) => {
   //función flecha
-  req.body = "consulta de datos 2"; //donde se podran consultar datos de un formulario almacenado de req
-  console.log(`enviada una petición post`);
-  console.log(req);
-  //res.send(`Hola soy la segunda ruta post`);
-  res.sendFile(path_html.join(__dirname, "../Formulario1-AP8.html")); //llamo a la ruta llamada x
+  //req.body = "consulta de datos 2"; //donde se podran consultar datos de un formulario almacenado de req
+  console.log(`enviada una petición post con formulario`);
+  console.log(req.body.nombre);
+  console.log(req.body.apellidos);
+  console.log(req.body.email);
+  console.log(req.body.sexo);
+  console.log(req.body.nacimiento);
+  console.log(req.body.contraseña);
+  console.log(req.body.movil);
+  res.redirect("http://127.0.0.1:5500/Proyecto/src/Formulario1-AP8.html");
+  //res.sendFile(path_html.join(__dirname, "../Formulario1-AP8.html")); //llamo a la ruta llamada x
 });
 
 router.post("/rutapost3conformulario", (req, res) => {
   //función flecha
-  req.body = "consulta de datos 3"; //donde se podran consultar datos de un formulario almacenado de req
-  console.log(`enviada una petición post`);
+  //req.body = "consulta de datos 3"; //donde se podran consultar datos de un formulario almacenado de req
+  console.log(`enviada una petición post con formulario`);
   console.log(req.body);
-  res.sendFile(path_html.join(__dirname, "../Formulario2-AP8.html")); //llamo a la ruta llamada x
+  res.redirect("http://127.0.0.1:5500/Proyecto/src/Formulario2-AP8.html");
+  //res.sendFile(path_html.join(__dirname, "../Formulario2-AP8.html")); //llamo a la ruta llamada x
 });
 
 router.post("/rutapost4conformulario", (req, res) => {
   //función flecha
-  req.body = "consulta de datos 4"; //donde se podran consultar datos de un formulario almacenado de req
-  console.log(`enviada una petición post`);
+  //req.body = "consulta de datos 4"; //donde se podran consultar datos de un formulario almacenado de req
+  console.log(`enviada una petición post con formulario`);
   console.log(req.body);
-  res.sendFile(path_html.join(__dirname, "../Formulario3-AP8.html")); //llamo a la ruta llamada x
+  res.json({
+    nombre: req.body.nombre,
+    apellidos: req.body.apellidos,
+    email: req.body.email,
+  })
+  //res.sendFile(path_html.join(__dirname, "../Formulario3-AP8.html")); //llamo a la ruta llamada x
 });
 
 router.post("/rutapost5sinformulario", (req, res) => {
