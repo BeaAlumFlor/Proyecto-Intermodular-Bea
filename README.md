@@ -33,11 +33,12 @@ Realizado:
 
 ---
 
-ACTUALIZACIÓN 25/02/2025
+ACTUALIZACIÓN 27/02/2025
 Tarea PI_006_PROTOTIPO_HTML
 Realizado:
 
-- Modificaciones del fichero indexrutas.js para hacer aparecer el re.body por consola
-- Modificaciones en los formularios para que sean tipo post
-- modificación en las rutas post para redireccionar o mostrar un json
+- Modificaciones del fichero indexrutas.js para hacer aparecer el req.body por consola
+- Modificaciones en los formularios para que sean tipo post y metidos en una carpeta llamada formularios
+- modificación en las rutas post para redireccionar, mostrar un mensaje o mostrar un json
+-Actualización del gitHub
 

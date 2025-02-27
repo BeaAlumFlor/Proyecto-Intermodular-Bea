@@ -61,6 +61,7 @@ router.post("/rutapost2conformulario", (req, res) => {
   //función flecha
   //req.body = "consulta de datos 2"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post con formulario`);
+  //Todo lo siguiente me devolverá en consola
   console.log(req.body.nombre);
   console.log(req.body.apellidos);
   console.log(req.body.email);
@@ -68,7 +69,7 @@ router.post("/rutapost2conformulario", (req, res) => {
   console.log(req.body.nacimiento);
   console.log(req.body.contraseña);
   console.log(req.body.movil);
-  res.redirect("http://127.0.0.1:5500/Proyecto/src/Formulario1-AP8.html");
+  res.redirect("http://127.0.0.1:5500/Proyecto/src/Formularios/Formulario1-AP8.html");
   //res.sendFile(path_html.join(__dirname, "../Formulario1-AP8.html")); //llamo a la ruta llamada x
 });
 
@@ -76,8 +77,9 @@ router.post("/rutapost3conformulario", (req, res) => {
   //función flecha
   //req.body = "consulta de datos 3"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post con formulario`);
-  console.log(req.body);
-  res.redirect("http://127.0.0.1:5500/Proyecto/src/Formulario2-AP8.html");
+  console.log(req.body); //muestra todo lo que rellenas en el formulario
+  //res.redirect("http://127.0.0.1:5500/Proyecto/src/Formularios/Formulario2-AP8.html");
+  res.send("El formulario ha sido enviado")
   //res.sendFile(path_html.join(__dirname, "../Formulario2-AP8.html")); //llamo a la ruta llamada x
 });
 
@@ -87,11 +89,13 @@ router.post("/rutapost4conformulario", (req, res) => {
   console.log(`enviada una petición post con formulario`);
   console.log(req.body);
   res.json({
-    nombre: req.body.nombre,
-    apellidos: req.body.apellidos,
-    email: req.body.email,
-  })
-  //res.sendFile(path_html.join(__dirname, "../Formulario3-AP8.html")); //llamo a la ruta llamada x
+    nombre: req.body.Nombre,
+    apellidos: req.body.Apellidos,
+    email: req.body.Email,
+    fecha_nacimiento: req.body.nacimiento,
+    condición: req.body.Condiciones,
+  }) //mostrará en la página un json con las cosas indicadas
+
 });
 
 router.post("/rutapost5sinformulario", (req, res) => {
