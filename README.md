@@ -42,3 +42,12 @@ Realizado:
 - modificación en las rutas post para redireccionar, mostrar un mensaje o mostrar un json
 -Actualización del gitHub
 
+---
+
+ACTUALIZACIÓN 12/03/2025
+Tarea PI_006_PROTOTIPO_DESPLIEGUE
+Realizado:
+- Varias actualizaciones fallidas, vuelta a los archivos de la entrega del pl006 e inicio de nuevo el proceso.
+- Creación usuario Render, nuevo web service y unido con la carpeta de proyecto de git hub
+    --> Recuerda que has cambiado lo del npm run start al iniciar servidor
+- Cambio en las rutas de los html donde copiamos la ruta del render 
