@@ -78,7 +78,7 @@ router.post("/rutapost3conformulario", (req, res) => {
   //req.body = "consulta de datos 3"; //donde se podran consultar datos de un formulario almacenado de req
   console.log(`enviada una petición post con formulario`);
   console.log(req.body); //muestra todo lo que rellenas en el formulario
-  //res.redirect("http://127.0.0.1:5500/Proyecto/src/formularios/Formulario2-AP8.html");
+  //res.redirect("http://127.0.0.1:5500/Proyecto/src/Frontend/web_Frontend/Formulario2-AP8.html");
   res.send("El formulario ha sido enviado")
   //res.sendFile(path_html.join(__dirname, "../Formulario2-AP8.html")); //llamo a la ruta llamada x
 });
