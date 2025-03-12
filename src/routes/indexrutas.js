@@ -69,7 +69,7 @@ router.post("/rutapost2conformulario", (req, res) => {
   console.log(req.body.nacimiento);
   console.log(req.body.contraseña);
   console.log(req.body.movil);
-  res.redirect("http://127.0.0.1:5500/Proyecto/src/Frontend/web_Frontend/Formulario1-AP8.html");
+  res.redirect("https://beaalumflor.github.io/web_Frontend/");
   //res.sendFile(path_html.join(__dirname, "../Formulario1-AP8.html")); //llamo a la ruta llamada x
 });
 
