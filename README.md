@@ -44,7 +44,7 @@ Realizado:
 
 ---
 
-ACTUALIZACIÓN 12/03/2025
+ACTUALIZACIÓN 13/03/2025
 Tarea PI_007_PROTOTIPO_DESPLIEGUE
 Realizado:
 - Varias actualizaciones fallidas, vuelta a los archivos de la entrega del pl006 e inicio de nuevo el proceso.
@@ -53,3 +53,4 @@ Realizado:
 - Cambio en las rutas de los html donde copiamos la ruta del render 
 - Creación segundo repositorio para web-frontend: https://github.com/BeaAlumFlor/Web-Frontend.git
 - Subida de los fromularios en el segundo repositorio
+- Comprobaciones de las conexiones entre los dos  (front y back)
