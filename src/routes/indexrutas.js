@@ -2,6 +2,8 @@ const { Router } = require("express"); //solo utiliza el trocito de las rutas
 const router = Router(); //llama a ese trocito
 //const path_html = require("path"); //para acceder a rutas internas
 
+const OpenAI = require("openai");
+
 //Rutas
 router.get("/", function (req, res) {
   //primer parametro nombre de ruta, el segundo lo que quiero que haga (funcion anonima, solo se usa aqui, no necesita nombre)
@@ -105,5 +107,28 @@ router.post("/rutapost5sinformulario", (req, res) => {
   console.log(req.body);
   res.send(`Hola soy la quinta ruta post`);
 });
+
+router.post("/rutaPOST_AI", (req, res) => {
+  const openai = new OpenAI({
+    apiKey: ""
+      
+  });
+
+  const completion = openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    store: true,
+    messages: [
+      {
+        role: "developer",
+        content: "Eres un ordenador provocador, divertido y sabelotodo" + req.body.pregunta,
+      },
+    ],
+  });
+
+  completion.then((result) => {
+    res.send(result.choices[0].message);
+  });
+});
+
 
 module.exports = router; //exportación para que pueda usarlo el servidor

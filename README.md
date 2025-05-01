@@ -54,3 +54,14 @@ Realizado:
 - Creación segundo repositorio para web-frontend: https://github.com/BeaAlumFlor/Web-Frontend.git
 - Subida de los fromularios en el segundo repositorio
 - Comprobaciones de las conexiones entre los dos  (front y back)
+
+---
+
+ACTUALIZACIÓN 25/04/2025
+Tarea PI_009_PROTOTIPO_IA
+Realizado:
+-Instalacion de módulos openai y cors
+-Escrito en index.js la variable que inicializa el cors
+- los dos middleware para poder enviar y recibir peticiones POST en formato json
+- Añadimos a indexrutas.js la ruta post con la api de openai
+- Creamos en unity un proyecto para fornt end donde preguntaremos al ordenador
