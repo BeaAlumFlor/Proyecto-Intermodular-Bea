@@ -1,6 +1,5 @@
 const { Router } = require("express"); //solo utiliza el trocito de las rutas
 const router = Router(); //llama a ese trocito
-const mysql =require("mysql");
 
 
 //const path_html = require("path"); //para acceder a rutas internas

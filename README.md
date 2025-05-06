@@ -65,3 +65,13 @@ Realizado:
 - los dos middleware para poder enviar y recibir peticiones POST en formato json
 - Añadimos a indexrutas.js la ruta post con la api de openai
 - Creamos en unity un proyecto para fornt end donde preguntaremos al ordenador
+
+---
+
+ACTUALIZACIÓN 06/05/2025
+Tarea PI_010_PROTOTIPO_MySQL
+Realizado:
+- Instalacion de módulos mySQL
+- modicicación en el fichero index.js para llamar al módulo
+- creacion de MySQL.js con las distintas rutas
+- Modificacion en el html del frontend para crear formulario 

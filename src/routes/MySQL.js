@@ -21,19 +21,29 @@ router.get("/getSQL", (req, res) => {
     console.log(db);
     let sql = "SELECT * FROM usuarios";
     let query = db.query(sql,(err, result) => {
-      console.log(results);
+      console.log(result);
       res.json(result);
     });
   });
   
   router.post("/postSQL", (req, res) => {
-    let post = {usuario: "prueba", pontraseña: 12345 };
+    let post = {usuario: req.body.user, contraseña: req.body.pass };
+    //post = req.body;
     let sql = "INSERT INTO usuarios SET ?";
     let query = db.query(sql, post, (err, result) => {
-      console.log(result);
-      res.json(result);
+      if (err){
+        console.log(err);
+      } else {
+        console.log("persona insertada");
+        res.json({  //mostrará en la página un json con las cosas indicadas
+            usuario: req.body.user,
+            contraseña: req.body.pass,
+        });
+      }
+    
     });
   });
+
 
   
   module.exports = router
