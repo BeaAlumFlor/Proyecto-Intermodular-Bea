@@ -1,5 +1,8 @@
 const { Router } = require("express"); //solo utiliza el trocito de las rutas
 const router = Router(); //llama a ese trocito
+const mysql =require("mysql");
+
+
 //const path_html = require("path"); //para acceder a rutas internas
 
 const OpenAI = require("openai");
@@ -129,6 +132,7 @@ router.post("/rutaPOST_AI", (req, res) => {
     res.send(result.choices[0].message);
   });
 });
+
 
 
 module.exports = router; //exportación para que pueda usarlo el servidor
