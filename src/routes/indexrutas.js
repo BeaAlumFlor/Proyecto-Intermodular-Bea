@@ -133,6 +133,4 @@ router.post("/rutaPOST_AI", (req, res) => {
   });
 });
 
-
-
 module.exports = router; //exportación para que pueda usarlo el servidor

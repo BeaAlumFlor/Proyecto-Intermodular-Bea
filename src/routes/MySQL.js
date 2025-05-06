@@ -27,7 +27,7 @@ router.get("/getSQL", (req, res) => {
   });
   
   router.post("/postSQL", (req, res) => {
-    let post = {usuario: "prueba", pass: 12345 };
+    let post = {usuario: "prueba", pontraseña: 12345 };
     let sql = "INSERT INTO usuarios SET ?";
     let query = db.query(sql, post, (err, result) => {
       console.log(result);
